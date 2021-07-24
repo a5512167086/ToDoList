@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(25, 163, 255), rgb(6, 253, 34));
+}
+
+i {
+  pointer-events: none;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+    border-radius: 10px;
+    outline: none;
+  }
+  input[type="number"] {
+    text-align: center;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 114);
+    color: white;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 10rem;
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(0, 146, 114);
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div.todo {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25rem 0rem;
+    p {
+      background-color: azure;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.to-do-text {
+      width: 75%;
+    }
+    p.to-do-time {
+      width: 25%;
+      text-align: center;
+    }
+    button {
+      margin-left: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+    button.delete {
+      background-color: red;
+    }
+    button.complete {
+      background-color: green;
+    }
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
